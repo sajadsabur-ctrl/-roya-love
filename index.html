@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>Roya 💙</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Vazirmatn',sans-serif}
+html{scroll-behavior:smooth}
+
+body{
+background:linear-gradient(135deg,#8360c3,#2ebf91);
+color:#fff;
+overflow-x:hidden
+}
+
+/* HEADER */
+header{
+position:fixed;
+top:0;left:0;
+width:100%;
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.25);
+backdrop-filter:blur(10px);
+z-index:1000
+}
+.logo{font-size:1.4rem;font-weight:700}
+nav a{
+margin:0 12px;
+color:#fff;
+text-decoration:none;
+opacity:.9
+}
+nav a:hover{opacity:1}
+
+/* SECTIONS */
+section{padding:120px 20px}
+h2{text-align:center;margin-bottom:35px;font-size:2.2rem}
+
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center
+}
+.hero h1{font-size:3.4rem}
+.hero p{margin-top:10px;opacity:.9}
+
+.nav-buttons{
+margin-top:50px;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+max-width:420px
+}
+.nav-btn{
+padding:16px;
+border-radius:18px;
+background:rgba(255,255,255,.25);
+cursor:pointer;
+backdrop-filter:blur(10px);
+transition:.3s
+}
+.nav-btn:hover{transform:scale(1.08)}
+
+/* BOX */
+.box{
+max-width:900px;
+margin:auto;
+background:rgba(255,255,255,.2);
+padding:45px;
+border-radius:30px;
+line-height:2.3;
+backdrop-filter:blur(10px)
+}
+
+/* TIMELINE */
+.timeline{
+max-width:900px;
+margin:auto;
+display:grid;
+gap:25px
+}
+.event{
+background:rgba(255,255,255,.18);
+padding:25px;
+border-radius:20px
+}
+
+/* COUNTER */
+.counter{text-align:center;font-size:1.6rem;line-height:2}
+
+/* FOOTER */
+footer{
+padding:40px 20px;
+text-align:center;
+background:rgba(0,0,0,.25);
+opacity:.9
+}
+
+/* MUSIC */
+#musicBtn{
+position:fixed;
+bottom:20px;
+right:20px;
+width:55px;
+height:55px;
+border-radius:50%;
+background:rgba(255,255,255,.3);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:22px;
+cursor:pointer;
+backdrop-filter:blur(10px);
+z-index:999
+}
+
+/* TOP BUTTON */
+#topBtn{
+position:fixed;
+bottom:20px;
+left:20px;
+width:50px;
+height:50px;
+border-radius:50%;
+background:rgba(255,255,255,.3);
+display:flex;
+align-items:center;
+justify-content:center;
+cursor:pointer;
+backdrop-filter:blur(10px)
+}
+
+/* HEARTS */
+.heart{
+position:fixed;
+bottom:-30px;
+animation:float 6s linear infinite;
+opacity:.8
+}
+@keyframes float{
+to{transform:translateY(-120vh);opacity:0}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">Roya 💙</div>
+<nav>
+<a href="#home">خانه</a>
+<a href="#about">درباره ما</a>
+<a href="#timeline">تایم‌لاین</a>
+<a href="#occasions">مناسبت‌ها</a>
+<a href="#love">روز عشق</a>
+</nav>
+</header>
+
+<audio id="music" loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+<div id="musicBtn" onclick="toggleMusic()">🎵</div>
+<div id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️</div>
+
+<section class="hero" id="home">
+<h1>رویا 💙</h1>
+<p>این سایت قراره با خاطره‌هامون بزرگ‌تر بشه…</p>
+
+<div class="nav-buttons">
+<div class="nav-btn" onclick="go('about')">💌 درباره ما</div>
+<div class="nav-btn" onclick="go('timeline')">📅 تایم‌لاین</div>
+<div class="nav-btn" onclick="go('birthday')">🎂 تولدت</div>
+<div class="nav-btn" onclick="go('love')">❤️ روز عشق</div>
+</div>
+</section>
+
+<section id="about">
+<h2>💌 درباره ما</h2>
+<div class="box">
+ما از ۲۱ مرداد ۱۴۰۲ شروع شدیم…  
+این سایت قراره هر سال  
+هر مناسبت  
+و هر خاطره جدید رو ثبت کنه.
+</div>
+</section>
+
+<section id="timeline">
+<h2>📅 تایم‌لاین رابطه</h2>
+<div class="timeline">
+<div class="event">💙 ۲۱ مرداد ۱۴۰۲ — شروع آشنایی</div>
+<div class="event">✨ روزهای عمیق‌تر شدن</div>
+<div class="event">🌱 آینده‌ای که با هم می‌سازیم</div>
+</div>
+</section>
+
+<section>
+<h2>⏳ از آشنایی‌مون گذشته</h2>
+<div class="counter" id="sinceCounter"></div>
+</section>
+
+<section id="birthday">
+<h2>🎂 شمارش تا تولد رویا</h2>
+<div class="counter" id="birthdayCounter"></div>
+<p style="text-align:center">۲۰ شهریور 💙</p>
+</section>
+
+<section id="occasions">
+<h2>🎉 مناسبت‌های آینده</h2>
+<div class="timeline">
+<div class="event">🎂 تولد رویا</div>
+<div class="event">💖 سالگرد آشنایی</div>
+<div class="event">🎁 سورپرایزهای بعدی…</div>
+</div>
+</section>
+
+<section id="love">
+<h2>❤️ روز عشق</h2>
+<div class="box">
+رویا جان…  
+این فقط یه سایت نیست،  
+یه دفتر خاطره آنلاینه  
+برای عشقی که ادامه داره 💙
+</div>
+</section>
+
+<footer>
+ساخته شده با عشق 💙 | Roya Website © 2026
+</footer>
+
+<script>
+function go(id){
+document.getElementById(id).scrollIntoView({behavior:"smooth"});
+if(!playing) toggleMusic();
+}
+
+let playing=false;
+function toggleMusic(){
+const m=document.getElementById("music");
+const b=document.getElementById("musicBtn");
+playing? (m.pause(),b.innerHTML="🎵"):(m.play(),b.innerHTML="⏸️");
+playing=!playing;
+}
+
+// Counters
+const start=new Date("2023-08-12");
+setInterval(()=>{
+let diff=new Date()-start;
+let d=Math.floor(diff/86400000);
+let h=Math.floor(diff/3600000)%24;
+let m=Math.floor(diff/60000)%60;
+let s=Math.floor(diff/1000)%60;
+sinceCounter.innerHTML=`${d} روز، ${h} ساعت، ${m} دقیقه، ${s} ثانیه`;
+},1000);
+
+function birthday(){
+let now=new Date(),y=now.getFullYear();
+let b=new Date(`${y}-09-11`);
+if(now>b)b=new Date(`${y+1}-09-11`);
+let diff=b-now;
+birthdayCounter.innerHTML=
+`${Math.floor(diff/86400000)} روز مونده 🎉`;
+}
+setInterval(birthday,1000);
+
+// Hearts
+setInterval(()=>{
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML="💙";
+h.style.left=Math.random()*100+"vw";
+document.body.appendChild(h);
+setTimeout(()=>h.remove(),6000);
+},400);
+</script>
+
+</body>
+</html>
